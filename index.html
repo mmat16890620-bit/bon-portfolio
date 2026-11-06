@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BON｜店舗集客本舗 — 制作実績ポートフォリオ</title>
+<style>
+:root{
+  --navy:#0e1626; --navy2:#16233c; --ink:#1c2432; --paper:#f7f3ec; --card:#ffffff;
+  --amber:#e8a13a; --amber-d:#c47f1d; --teal:#1f6f5c; --line:#e3dccd; --mut:#5c6575;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 70%);color:#fff;padding:56px 0 48px}
+.brand{font-size:13px;letter-spacing:.28em;color:var(--amber);font-weight:700}
+h1{font-size:34px;line-height:1.35;margin:12px 0 6px;font-weight:800}
+.hero-sub{font-size:16px;color:#d9e0ee;max-width:640px}
+.chips{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:5px 14px;font-size:13px}
+.chip.hot{background:var(--amber);border-color:var(--amber);color:#23180a;font-weight:700}
+section{padding:52px 0 8px}
+.sec-tag{font-size:12px;letter-spacing:.24em;color:var(--amber-d);font-weight:700}
+h2{font-size:25px;margin:6px 0 10px;font-weight:800}
+.lead{color:var(--mut);font-size:15px;max-width:700px}
+.note{background:#fff8ea;border:1px solid #eed9ac;border-radius:12px;padding:12px 16px;font-size:13.5px;margin:18px 0 26px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media (max-width:680px){.grid{grid-template-columns:1fr}h1{font-size:27px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 28px rgba(20,28,48,.07)}
+.phone{padding:18px 18px 0}
+.phone img{border-radius:14px;border:1px solid #ddd6c6;box-shadow:0 8px 22px rgba(20,28,48,.13);width:100%}
+.card-body{padding:18px 20px 22px}
+.card h3{font-size:18px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--mut)}
+.tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11.5px;background:#f0ead9;color:#6b5b23;border-radius:6px;padding:2px 9px}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px}
+@media (max-width:680px){.frames{grid-template-columns:1fr 1fr}}
+.frame img{border-radius:14px;border:1px solid #2a3852;box-shadow:0 8px 22px rgba(14,22,38,.25);width:100%}
+.frame p{font-size:12.5px;color:var(--mut);margin-top:8px;text-align:center}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+@media (max-width:680px){.feat{grid-template-columns:1fr}}
+.feat-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.feat-item b{display:block;font-size:15.5px;margin-bottom:4px}
+.feat-item span{font-size:13.5px;color:var(--mut)}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:680px){.menu{grid-template-columns:1fr}}
+.plan{background:var(--navy);color:#fff;border-radius:18px;padding:24px}
+.plan.light{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.plan h3{font-size:18px;margin-bottom:2px}
+.price{font-size:27px;font-weight:800;margin:8px 0 2px}
+.price small{font-size:13px;font-weight:600;color:var(--amber)}
+.plan.light .price small{color:var(--amber-d)}
+.plan ul{list-style:none;margin-top:12px;font-size:14px}
+.plan li{padding:5px 0;border-top:1px dashed rgba(140,150,170,.4)}
+.plan li:first-child{border-top:none}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:8px}
+@media (max-width:680px){.flow{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.step b{display:block;color:var(--amber-d);font-size:12px;letter-spacing:.14em;margin-bottom:4px}
+.step span{font-size:13.5px;font-weight:600}
+.caution{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;font-size:14px;color:#3c4454}
+.caution li{margin:6px 0 6px 20px}
+footer{margin-top:56px;background:var(--navy);color:#aeb9cf;text-align:center;padding:30px 16px;font-size:13px}
+footer b{color:#fff;letter-spacing:.18em}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">PORTFOLIO</div>
+    <h1>BON｜店舗集客本舗</h1>
+    <p class="hero-sub">店舗向けのLP（ランディングページ）制作と、縦型ショート動画（リール）制作をしています。お店の情報を、スマホで見やすく・分かりやすく伝えるページと動画をお作りします。</p>
+    <div class="chips">
+      <span class="chip hot">LP制作</span>
+      <span class="chip">縦型リール動画</span>
+      <span class="chip">文案作成込み</span>
+      <span class="chip">整体院・接骨院／美容サロン／飲食店など店舗全般</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-tag">WORKS — LP</div>
+    <h2>LP制作サンプル</h2>
+    <p class="lead">スマホで開いたときの見え方を、そのまま掲載しています。世界観（色・写真・コピー）は店舗のジャンルと客層に合わせて1件ずつ設計します。</p>
+    <div class="note">※ 掲載のLPは、すべて<strong>架空の店舗を題材にした制作サンプル</strong>です。店舗名・料金・地域などの設定は架空のもので、実在の店舗のページではありません。</div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="phone"><img src="shot-harukaze-b.png" alt="はるかぜ接骨院LP（標準スタイル）"></div>
+        <div class="card-body">
+          <h3>はるかぜ接骨院（接骨院）</h3>
+          <p>現在の標準スタイル。深緑×アンバーの配色に、水彩タッチの施術ビジュアルと映画のようなヒーロー構成。コピーは「ケガも、痛みも、あきらめなくていい。」。初回体験の料金を大きく見せ、画面下に予約ボタンを固定表示しています。</p>
+          <div class="tags"><span class="tag">標準スタイル</span><span class="tag">アニメーション演出</span><span class="tag">固定CTA</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="phone"><img src="shot-harukaze-real.png" alt="はるかぜ接骨院LP（フォトリアル版）"></div>
+        <div class="card-body">
+          <h3>はるかぜ接骨院（フォトリアル版）</h3>
+          <p>同じ原稿・構成のまま、ヒーロービジュアルを写真風の表現に差し替えたバリエーション。奥行きを持たせた画像がスクロールや端末の動きに合わせてずれて動く、パララックス演出を入れています。</p>
+          <div class="tags"><span class="tag">写真風ビジュアル</span><span class="tag">奥行きパララックス</span><span class="tag">WebGL</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="phone"><img src="shot-koshiraku.png" alt="こしらく整体院LP"></div>
+        <div class="card-body">
+          <h3>こしらく整体院（整体院）</h3>
+          <p>「腰のつらさに特化」という絞り込みを、そのままコピーと世界観に反映した1枚。紺×オレンジ、和の静けさを感じるビジュアルで、働く世代に向けた落ち着いたトーンにしています。</p>
+          <div class="tags"><span class="tag">症状特化型</span><span class="tag">紺×オレンジ</span><span class="tag">シネマ画風</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="phone"><img src="shot-move.png" alt="ムーブ整体スタジオLP"></div>
+        <div class="card-body">
+          <h3>ムーブ整体スタジオ（スポーツ整体）</h3>
+          <p>スポーツをする人向けに、紺×ライムのアクティブな配色と、朝の川辺で準備するランナーのビジュアルで設計。「学生20%OFF」など、客層に刺さる情報をヒーロー直下に置いています。</p>
+          <div class="tags"><span class="tag">スポーツ特化</span><span class="tag">紺×ライム</span><span class="tag">若年層向け</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="phone"><img src="shot-yurari.png" alt="ほぐし整体 ゆらりLP"></div>
+        <div class="card-body">
+          <h3>ほぐし整体 ゆらり（女性向け整体）</h3>
+          <p>女性専用・完全個室という特徴に合わせて、夜のリラックス感を出す黒×テラコッタの世界観に。「頑張ってきた体に、ほっとする60分を。」と、利用シーンから入るコピーにしています。</p>
+          <div class="tags"><span class="tag">女性向け</span><span class="tag">黒×テラコッタ</span><span class="tag">世界観重視</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="phone"><img src="shot-nail.png" alt="ネイルサロン つめいろLP"></div>
+        <div class="card-body">
+          <h3>ネイルサロン つめいろ（美容サロン）</h3>
+          <p>整体以外の業種サンプル。深いボルドー×ローズの配色に、ジェルカラーの立体ビジュアル。予約導線はLINEを主軸に組み、電話ボタンを併設しています。業種が変わっても、導線設計の考え方は同じです。</p>
+          <div class="tags"><span class="tag">美容サロン</span><span class="tag">LINE予約導線</span><span class="tag">3Dビジュアル</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-tag">WORKS — VIDEO</div>
+    <h2>動画制作の実演</h2>
+    <p class="lead">自社SNSで毎日、モーショングラフィックスのリール動画を制作・公開しています。下の画像は、その実演動画（GitHubリポジトリ紹介シリーズ）の実際のフレームです。</p>
+    <div class="note">※ 正直にお伝えすると、掲載フレームは<strong>店舗向けリールの受注実績ではなく</strong>、自社SNSで公開している技術紹介リールです。「毎日作って公開している制作体制と演出の型」をご覧いただくための実演として掲載しています。店舗向けのご依頼では、この演出・構成をお店の素材と内容で制作します。</div>
+
+    <div class="frames">
+      <div class="frame">
+        <img src="reel-frame-fastapi.jpg" alt="BEFORE構成のフレーム">
+        <p>悩みから入る「BEFORE」カット</p>
+      </div>
+      <div class="frame">
+        <img src="reel-frame-matplotlib.jpg" alt="本編カード表示のフレーム">
+        <p>情報をカードで見せる本編カット</p>
+      </div>
+      <div class="frame">
+        <img src="reel-frame-demo.jpg" alt="数字とテロップのフレーム">
+        <p>大きな数字とマーカー風テロップ</p>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-item"><b>ホログラム風の背景演出</b><span>回転するホログラム調の地球儀、大陸のドット、ネットワークの弧、粒子の流れを重ねた近未来的な背景。スクロールする指を止めるための視覚的なフックとして設計しています。</span></div>
+      <div class="feat-item"><b>文字の動き（モーションタイポグラフィ）</b><span>テロップは「読ませる」のではなく「見せる」前提で、大きな文字が叩き込まれるように出る動きを付けます。1画面の情報量を絞り、要点だけを残します。</span></div>
+      <div class="feat-item"><b>ビフォーアフター構成</b><span>「悩み（BEFORE）→ 実演・変化（AFTER）→ お店の案内」という流れを1本の型として持っています。店舗向けでは、施術や商品の見せ場をこの型に当てはめます。</span></div>
+      <div class="feat-item"><b>毎日の量産体制</b><span>指示書（台本シート）→ 生成 → 仕上げ → 投稿文案、という手順を型化し、自社SNSで毎日2本の制作・公開を継続しています。継続納品の土台はこの体制です。</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-tag">WORKS — AI CHATBOT</div>
+    <h2>AIチャットボット構築</h2>
+    <p class="lead">店舗のホームページやLINEに設置する、受付・問い合わせ対応のAIチャットボットを構築します。営業時間・料金・予約の案内など、よくある質問への回答を24時間自動化します。</p>
+    <div class="note">下記のデモは、架空の接骨院を題材にしたサンプルボットです。実際に質問を入力してお試しいただけます（知識にない質問は、無理に答えず電話での問い合わせへ案内する設計です）。</div>
+    <div style="height:14px"></div>
+    <p><a href="https://udify.app/chat/y4CMlkLsaZ5hY6SC" target="_blank" rel="noopener" style="display:inline-block;padding:12px 26px;border-radius:999px;background:#1d4d3b;color:#fff;text-decoration:none;font-weight:700">▶ 実演デモを触ってみる（無料・登録不要）</a></p>
+    <div class="feat">
+      <div class="feat-item"><b>24時間の自動応答</b><span>夜間や施術中など、手が離せない時間の問い合わせを取りこぼしません。</span></div>
+      <div class="feat-item"><b>お店の情報で学習</b><span>営業時間・料金・メニュー・アクセスなど、お店ごとの情報をもとに回答を組み立てます。</span></div>
+      <div class="feat-item"><b>分からない質問は人に渡す</b><span>知識にない内容は推測で答えず、電話やフォームへの問い合わせに案内します。誤答でお客さまを困らせない設計です。</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-tag">MENU</div>
+    <h2>サービスメニューと価格の目安</h2>
+    <p class="lead">以下は目安です。内容・素材の状況によりお見積もりが変わります。各プラットフォーム経由のご依頼では、そのプラットフォームの規約・手数料が適用されます。</p>
+    <div style="height:18px"></div>
+    <div class="menu">
+      <div class="plan light">
+        <h3>LP制作（1ページ）</h3>
+        <div class="price">15,000円<small>〜 ／ 現在は先着の特別価格</small></div>
+        <ul>
+          <li>店舗向けLP 1ページ（スマホ最適化）</li>
+          <li>キャッチコピーなどの文案作成込み</li>
+          <li>通常価格は30,000円を予定</li>
+        </ul>
+      </div>
+      <div class="plan light">
+        <h3>リール動画制作（単発）</h3>
+        <div class="price">10,000円<small>〜 ／ 先着3名さま価格</small></div>
+        <ul>
+          <li>縦型動画1本（30秒前後、1080×1920）</li>
+          <li>構成・テロップ・BGM・効果音込み</li>
+          <li>納期5日／修正1回まで／MP4納品</li>
+          <li>通常価格は15,000円を予定</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>月額リール制作パック</h3>
+        <div class="price">20,000円<small>／月〜</small></div>
+        <ul>
+          <li>ライト 20,000円：月2本＋投稿文案</li>
+          <li>スタンダード 30,000円：月4本＋投稿文案</li>
+          <li>プレミアム 50,000円：月4本＋文案・タグ設計＋投稿代行＋月次レポートと相談</li>
+        </ul>
+      </div>
+      <div class="plan light">
+        <h3>AIチャットボット構築</h3>
+        <div class="price">内容に応じてお見積もり</div>
+        <ul>
+          <li>店舗向け受付・問い合わせボットの構築</li>
+          <li>営業時間・料金・予約案内などのFAQ設計込み</li>
+          <li>まずは実演デモで動きをご確認ください</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>店舗集客まるごとパッケージ</h3>
+        <div class="price">190,000円<small>／ 3ヶ月伴走</small></div>
+        <ul>
+          <li>LP制作 ×1</li>
+          <li>リール月4本 × 3ヶ月（文案・投稿代行込み）</li>
+          <li>SNS導線の設計＋月次レポート・相談 ×3回</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="height:30px"></div>
+    <div class="sec-tag">FLOW</div>
+    <h2 style="font-size:21px">ご依頼の流れ</h2>
+    <div class="flow">
+      <div class="step"><b>STEP 1</b><span>ヒアリング</span></div>
+      <div class="step"><b>STEP 2</b><span>構成・文案案の提示</span></div>
+      <div class="step"><b>STEP 3</b><span>制作</span></div>
+      <div class="step"><b>STEP 4</b><span>確認・修正</span></div>
+      <div class="step"><b>STEP 5</b><span>納品</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-tag">NOTES</div>
+    <h2>ご確認ください</h2>
+    <div class="caution">
+      <ul>
+        <li>掲載のLPはすべて架空の店舗を題材にした制作サンプルです。店舗名・料金・キャンペーンなどの設定は架空のものであり、実在の店舗の実績ではありません。</li>
+        <li>動画のフレームは、自社SNSで公開している技術紹介リールの実演です。店舗向けリールの受注実績として掲載しているものではありません。</li>
+        <li>再生数・集客数・売上などの成果をお約束するものではありません。</li>
+        <li>医療・健康に関する効果を断定する表現（「治る」「必ず改善する」など）は、広告のルールに配慮し使用しません。</li>
+        <li>写真・動画・ロゴなどの素材は、お客さまにご用意いただく場合があります（素材が少ない場合の進め方はご相談ください）。</li>
+        <li>表示価格は目安です。正式なお見積もりは、内容を確認のうえご案内します。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>BON｜店舗集客本舗</b><br>
+  店舗向けLP制作 ／ 縦型ショート動画制作 ／ AIチャットボット構築
+</footer>
+
+</body>
+</html>
