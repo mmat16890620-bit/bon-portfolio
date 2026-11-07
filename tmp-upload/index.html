@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BON｜店舗集客本舗 — 店舗・ECの集客を、動画とLPでまるごと。</title>
+<meta name="description" content="商品動画・店舗リール・LP制作・AIチャットボット。店舗・ECの集客まわりを、まるごとおまかせください。ご注文はココナラ経由で安心してお取引いただけます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:ital,wght@0,900;1,900&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+--paper:#FBFAF5; --ink:#1D2A23; --muted:#68766C; --line:rgba(29,42,35,.12);
+--green:#17573F; --green-deep:#0C3524; --amber:#D97706; --amber-soft:#FDF3E3;
+--ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+
+/* ===== NAV: floating pill ===== */
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:60;width:min(680px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:10px 10px 10px 20px;border-radius:999px;background:rgba(251,250,245,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(29,42,35,.1);box-shadow:0 8px 28px rgba(12,53,36,.1)}
+.nav .mark{font-weight:900;font-size:15px;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.nav .mark small{font-family:"Noto Sans Mono",monospace;font-weight:400;font-size:9px;letter-spacing:.2em;color:var(--muted);display:block;line-height:1.2}
+.nav .links{display:none;gap:22px;font-size:13px;font-weight:500}
+.nav .links a{color:var(--ink);text-decoration:none}
+.nav .book{background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:999px;text-decoration:none;white-space:nowrap}
+@media(min-width:700px){.nav .links{display:flex}}
+
+/* ===== HERO ===== */
+.hero{position:relative;padding:128px 0 0;background:linear-gradient(180deg,#F3F0E7 0%,var(--paper) 78%);overflow:hidden}
+.hero-ghost{position:absolute;top:2%;right:-6%;font-family:"Noto Serif JP",serif;font-weight:900;font-size:56vw;line-height:1;color:var(--green-deep);opacity:.05;pointer-events:none}
+.hero-in{position:relative;z-index:2}
+.eyebrow{font-family:"Noto Sans Mono",monospace;font-size:11px;letter-spacing:.26em;color:var(--green-deep);display:flex;align-items:center;gap:10px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none}
+.hero h1{font-size:clamp(38px,10.4vw,62px);line-height:1.16;letter-spacing:-.02em;font-weight:900;margin:20px 0 16px}
+.hero h1 .acc{font-family:"Noto Serif JP",serif;font-style:italic;color:var(--green);font-size:.82em;letter-spacing:0}
+.hero .sub{font-size:15px;color:#33463C;font-weight:500;max-width:30rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{border:1px solid rgba(29,42,35,.22);border-radius:999px;padding:7px 15px;font-size:13px;font-weight:700;background:rgba(255,255,255,.6)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.cta-main{background:var(--amber);color:#221503;font-weight:700;font-size:15.5px;padding:16px 30px;border-radius:999px;text-decoration:none;box-shadow:0 12px 26px rgba(217,119,6,.32)}
+.cta-main small{display:block;font-size:10.5px;font-weight:500;opacity:.75;letter-spacing:.06em}
+.cta-sub{border:1px solid rgba(29,42,35,.3);color:var(--ink);font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;text-decoration:none;background:rgba(251,250,245,.5)}
+.hero-frames{display:flex;gap:10px;margin-top:38px}
+.hero-frames figure{flex:1}
+.hero-frames img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;box-shadow:0 14px 30px rgba(12,53,36,.16)}
+.hero-frames figcaption{font-size:10.5px;color:var(--muted);text-align:center;margin-top:7px;font-weight:500}
+.hero-meta{margin-top:36px;background:rgba(243,240,231,.92);border-top:1px solid var(--line)}
+.hero-meta ul{display:flex;max-width:720px;margin:0 auto;list-style:none;flex-wrap:wrap}
+.hero-meta li{flex:1 1 50%;text-align:center;padding:13px 2px;font-weight:700;font-size:12.5px;color:var(--green-deep)}
+.hero-meta li span{display:block;font-family:"Noto Sans Mono",monospace;font-size:9.5px;letter-spacing:.18em;color:var(--muted);font-weight:400;margin-bottom:2px}
+@media(min-width:700px){.hero-meta li{flex:1}}
+
+/* ===== SECTIONS ===== */
+.sec{padding:78px 0}
+.sec.alt{background:#F3F0E7}
+.sec-head{margin-bottom:30px}
+.sec-head h2{font-size:clamp(26px,6.4vw,36px);font-weight:900;line-height:1.3;margin-top:14px}
+.sec-head h2 .acc{font-family:"Noto Serif JP",serif;font-style:italic;color:var(--green);font-size:.85em}
+.sec-head .lead{color:var(--muted);font-size:14.5px;line-height:1.9;margin-top:10px;max-width:34rem}
+
+/* ===== SERVICE CARDS ===== */
+.cards{display:grid;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 24px;box-shadow:0 8px 24px rgba(12,53,36,.05)}
+.card .tag{display:inline-block;font-family:"Noto Sans Mono",monospace;font-size:10px;letter-spacing:.22em;color:var(--green);border:1px solid rgba(23,87,63,.35);border-radius:999px;padding:4px 12px;margin-bottom:14px}
+.card h3{font-size:21px;font-weight:900;line-height:1.4}
+.card .desc{color:#3D4F44;font-size:14px;line-height:1.9;margin-top:8px}
+.badge{display:inline-block;background:var(--amber);color:#fff;font-size:11px;font-weight:700;border-radius:999px;padding:3px 11px;margin-left:8px;vertical-align:2px}
+.tiers{margin:18px 0 4px;border-top:1px solid var(--line)}
+.tier{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.tier .t-name{font-weight:700;font-size:14.5px}
+.tier .t-feat{color:var(--muted);font-size:12.5px;line-height:1.7;margin-top:2px}
+.tier .t-price{font-weight:900;font-size:19px;white-space:nowrap}
+.tier .t-price small{font-size:11px;color:var(--muted);font-weight:500}
+.feat{list-style:none;margin:14px 0 2px}
+.feat li{font-size:13.5px;line-height:1.8;padding-left:20px;position:relative;color:#33463C}
+.feat li::before{content:"";position:absolute;left:2px;top:.68em;width:7px;height:7px;border-radius:50%;background:var(--amber)}
+.card .btnrow{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{display:inline-block;font-weight:700;font-size:14.5px;padding:14px 28px;border-radius:999px;text-decoration:none;text-align:center}
+.btn-amber{background:var(--amber);color:#221503;box-shadow:0 10px 22px rgba(217,119,6,.28)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-line{border:1px solid rgba(29,42,35,.32);color:var(--ink);background:#fff}
+.btn-note{font-size:11.5px;color:var(--muted)}
+.flagship{background:var(--green-deep);border-color:var(--green-deep);color:#F3F0E7}
+.flagship h3{color:#fff}
+.flagship .desc{color:#C9D6CC}
+.flagship .tag{color:#E9C48A;border-color:rgba(233,196,138,.45)}
+.flagship .tiers{border-top-color:rgba(243,240,231,.18)}
+.flagship .tier{border-bottom-color:rgba(243,240,231,.16)}
+.flagship .tier .t-feat{color:#A9BCAE}
+.flagship .feat li{color:#DCE6DD}
+.flagship .btn-note{color:#A9BCAE}
+.big-price{font-size:clamp(34px,9vw,46px);font-weight:900;color:#fff;line-height:1.1;margin-top:12px}
+.big-price small{font-size:13px;font-weight:500;color:#A9BCAE}
+
+/* ===== GALLERY ===== */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gallery figure{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.gallery img{width:100%;aspect-ratio:9/14;object-fit:cover;object-position:top}
+.gallery figcaption{font-size:12.5px;font-weight:700;padding:11px 14px}
+.gallery figcaption span{display:block;font-weight:400;color:var(--muted);font-size:11.5px;margin-top:1px}
+.works-note{font-size:12.5px;color:var(--muted);line-height:1.9;margin-top:16px}
+.sns-box{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.sns-box .t{font-weight:900;font-size:15.5px}
+.sns-box .d{color:var(--muted);font-size:13px;line-height:1.8}
+
+/* ===== FLOW ===== */
+.steps{display:grid}
+.step{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step .no{flex:none;width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;font-family:"Noto Sans Mono",monospace;font-size:15px;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:16.5px;font-weight:900}
+.step p{color:var(--muted);font-size:13.5px;line-height:1.85;margin-top:3px}
+
+/* ===== TRUST ===== */
+.trust{display:grid;gap:14px}
+@media(min-width:700px){.trust{grid-template-columns:1fr 1fr 1fr}}
+.trust .item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.trust h3{font-size:15.5px;font-weight:900;margin-bottom:8px}
+.trust p{color:var(--muted);font-size:13px;line-height:1.9}
+.fineprint{font-size:11.5px;color:var(--muted);line-height:1.9;margin-top:22px}
+
+/* ===== FOOTER ===== */
+footer{background:var(--green-deep);color:#DCE6DD;padding:56px 0 40px;margin-top:0}
+footer .mark{font-weight:900;font-size:18px;color:#fff}
+footer .mark small{font-family:"Noto Sans Mono",monospace;font-weight:400;font-size:9.5px;letter-spacing:.2em;color:#A9BCAE;display:block;margin-top:3px}
+footer p{font-size:13px;line-height:1.9;color:#A9BCAE;margin-top:14px;max-width:32rem}
+footer .f-links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+footer .copy{margin-top:34px;padding-top:18px;border-top:1px solid rgba(243,240,231,.16);font-size:11.5px;color:#8AA48E}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="mark" href="#top">BON｜店舗集客本舗<small>BON STORE PROMOTION</small></a>
+<div class="links"><a href="#service">サービス・価格</a><a href="#works">サンプル</a><a href="#flow">ご注文の流れ</a></div>
+<a class="book" href="https://coconala.com/users/6372815" target="_blank" rel="noopener">ココナラで注文する</a>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero" id="top">
+<div class="hero-ghost">集</div>
+<div class="wrap hero-in">
+<p class="eyebrow"><span class="dot"></span>VIDEO / LP / CHATBOT FOR STORES &amp; EC</p>
+<h1>店舗・ECの集客を、<br>動画とLPで<span class="acc">まるごと。</span></h1>
+<p class="sub">商品動画、店舗リール、LP制作、AIチャットボット。集客まわりの制作を、まとめておまかせください。</p>
+<div class="chips">
+<span class="chip">商品動画</span><span class="chip">店舗リール</span><span class="chip">LP制作</span><span class="chip">AIチャットボット</span>
+</div>
+<div class="cta-row">
+<a class="cta-main" href="https://coconala.com/users/6372815" target="_blank" rel="noopener">ココナラで注文する<small>決済・お取引はココナラ経由で安心</small></a>
+<a class="cta-sub" href="#service">サービス・価格を見る</a>
+</div>
+<div class="hero-frames">
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/reel-frame-fastapi.jpg" alt="自社SNSで毎日投稿しているリールのフレーム"><figcaption>毎日投稿中のリールより</figcaption></figure>
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/reel-frame-demo.jpg" alt="リール制作のフレームサンプル"><figcaption>リール制作サンプル</figcaption></figure>
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/reel-frame-matplotlib.jpg" alt="自社SNSで毎日投稿しているリールのフレーム"><figcaption>毎日投稿中のリールより</figcaption></figure>
+</div>
+</div>
+<div class="hero-meta">
+<ul>
+<li><span>REVISION</span>修正1回まで無料</li>
+<li><span>DELIVERY</span>動画は5日〜が目安</li>
+<li><span>ORDER</span>ご注文はココナラ経由</li>
+<li><span>SNS</span>自社SNSで毎日リール投稿中</li>
+</ul>
+</div>
+</header>
+
+<!-- ══════════ SERVICES ══════════ -->
+<section class="sec" id="service">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow"><span class="dot"></span>SERVICE &amp; PRICE</p>
+<h2>サービスと<span class="acc">価格</span></h2>
+<p class="lead">表示価格はすべて税込です。ご注文・お支払いはココナラ経由で、購入前のご相談もココナラのメッセージからどうぞ。</p>
+</div>
+<div class="cards">
+
+<!-- EC商品紹介動画 -->
+<article class="card">
+<span class="tag">EC VIDEO</span>
+<h3>EC商品紹介動画</h3>
+<p class="desc">商品写真・お持ちの素材から、商品ページやSNSで使える紹介動画（15〜30秒〜）を制作します。Amazon・楽天市場・Shopifyなどの出品者さま向けです。</p>
+<div class="tiers">
+<div class="tier"><div><p class="t-name">Light</p><p class="t-feat">15〜30秒／テロップ入り／納品サイズ1種／修正1回／納期5日</p></div><p class="t-price">¥12,000<small>（税込）</small></p></div>
+<div class="tier"><div><p class="t-name">Standard</p><p class="t-feat">〜60秒／テロップ＋BGM／納品サイズ2種／修正1回／納期5日</p></div><p class="t-price">¥20,000<small>（税込）</small></p></div>
+<div class="tier"><div><p class="t-name">Premium</p><p class="t-feat">台本作成込み／〜60秒／サイズ展開3種／構成2パターン／修正2回／納期7日</p></div><p class="t-price">¥35,000<small>（税込）</small></p></div>
+</div>
+<div class="btnrow">
+<a class="btn btn-amber" href="https://coconala.com/users/6372815" target="_blank" rel="noopener">ココナラで注文・相談する</a>
+<span class="btn-note">※EC動画のご注文・ご相談はココナラのプロフィールページから</span>
+</div>
+</article>
+
+<!-- 店舗リール単発 -->
+<article class="card">
+<span class="tag">REEL — SINGLE</span>
+<h3>店舗リール・ショート動画（単発）</h3>
+<p class="desc">Instagramリール／TikTok／YouTubeショート向けの縦型動画を1本から制作します。店舗紹介、商品・メニューの紹介などに。</p>
+<div class="tiers">
+<div class="tier"><div><p class="t-name">単発 1本</p><p class="t-feat">縦型ショート動画／テロップ入り／修正1回／納期5日</p></div><p class="t-price">¥15,000<small>（税込）</small></p></div>
+<div class="tier"><div><p class="t-name">先着3名さま価格</p><p class="t-feat">内容は単発プランと同じです。先着枠が終わり次第、通常価格になります</p></div><p class="t-price">¥10,000<small>（税込）</small></p></div>
+</div>
+<div class="btnrow">
+<a class="btn btn-amber" href="https://coconala.com/services/4474984" target="_blank" rel="noopener">ココナラで注文する</a>
+</div>
+</article>
+
+<!-- リール月額パック -->
+<article class="card">
+<span class="tag">REEL — MONTHLY</span>
+<h3>リール月額パック</h3>
+<p class="desc">「投稿が続かない」を外注で解決する月額プランです。制作本数とサポート範囲で3プランから選べます。</p>
+<div class="tiers">
+<div class="tier"><div><p class="t-name">Light</p><p class="t-feat">リール月2本</p></div><p class="t-price">¥20,000<small>（税込）/月</small></p></div>
+<div class="tier"><div><p class="t-name">Standard</p><p class="t-feat">リール月4本＋投稿文（キャプション）作成</p></div><p class="t-price">¥30,000<small>（税込）/月</small></p></div>
+<div class="tier"><div><p class="t-name">Premium</p><p class="t-feat">リール月4本＋投稿文＋投稿代行＋月次レポート</p></div><p class="t-price">¥50,000<small>（税込）/月</small></p></div>
+</div>
+<div class="btnrow">
+<a class="btn btn-amber" href="https://coconala.com/services/4474998" target="_blank" rel="noopener">ココナラで注文する</a>
+</div>
+</article>
+
+<!-- LP制作 -->
+<article class="card">
+<span class="tag">LANDING PAGE</span>
+<h3>LP制作</h3>
+<p class="desc">予約・問い合わせ・購入につなげる1ページ完結型のランディングページを制作します。スマホ表示を前提に設計します。</p>
+<div class="tiers">
+<div class="tier"><div><p class="t-name">LP制作 1ページ</p><p class="t-feat">構成・デザイン・実装／スマホ最適化</p></div><p class="t-price">¥30,000〜<small>（税込）</small></p></div>
+<div class="tier"><div><p class="t-name">先着5名さま価格</p><p class="t-feat">先着枠が終わり次第、通常価格（¥30,000〜）でのご案内になります</p></div><p class="t-price">¥15,000<small>（税込）</small></p></div>
+</div>
+<div class="btnrow">
+<a class="btn btn-amber" href="https://coconala.com/services/4470238" target="_blank" rel="noopener">ココナラで注文する</a>
+</div>
+</article>
+
+<!-- 店舗集客まるごとパッケージ -->
+<article class="card flagship">
+<span class="tag">FULL PACKAGE — 3 MONTHS</span>
+<h3>店舗集客まるごとパッケージ</h3>
+<p class="desc">LP・動画・投稿運用を3ヶ月かけて一式構築する、伴走型のパッケージです。バラバラに外注する手間なく、集客の導線をまとめて整えます。</p>
+<p class="big-price">¥190,000<small>（税込）</small></p>
+<ul class="feat">
+<li>LP制作 ×1</li>
+<li>リール動画 月4本 × 3ヶ月（投稿文つき）</li>
+<li>投稿代行</li>
+<li>SNSから予約・購入までの導線設計</li>
+<li>月次レポート＋ご相談 ×3回</li>
+</ul>
+<div class="btnrow">
+<a class="btn btn-amber" href="https://coconala.com/services/4475668" target="_blank" rel="noopener">ココナラで注文する</a>
+<span class="btn-note">納品期間の目安：90日／修正2回まで</span>
+</div>
+</article>
+
+<!-- AIチャットボット -->
+<article class="card">
+<span class="tag">AI CHATBOT</span>
+<h3>AIチャットボット構築</h3>
+<p class="desc">店舗の受付・予約対応を自動化するAIチャットボットを構築します。よくある質問への回答や、営業時間・メニューの案内などを24時間対応に。まずは実際のデモをお試しください。</p>
+<div class="btnrow">
+<a class="btn btn-dark" href="https://udify.app/chat/y4CMlkLsaZ5hY6SC" target="_blank" rel="noopener">デモを試す（接骨院の受付ボット）</a>
+<a class="btn btn-line" href="https://coconala.com/users/6372815" target="_blank" rel="noopener">ココナラで相談する</a>
+</div>
+<p class="btn-note" style="margin-top:12px">※料金は対応範囲のヒアリングのうえ、ココナラ経由でお見積もりします。</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- ══════════ WORKS ══════════ -->
+<section class="sec alt" id="works">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow"><span class="dot"></span>WORKS &amp; SAMPLES</p>
+<h2>制作<span class="acc">サンプル</span></h2>
+<p class="lead">LPの制作サンプルです。全作品はポートフォリオサイトでもご覧いただけます。</p>
+</div>
+<div class="gallery">
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/shot-harukaze-real.png" alt="はるかぜ接骨院のLPサンプル（フォトリアル版）"><figcaption>はるかぜ接骨院<span>接骨院LP（フォトリアル版）</span></figcaption></figure>
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/shot-harukaze-b.png" alt="はるかぜ接骨院のLPサンプル"><figcaption>はるかぜ接骨院<span>接骨院LP</span></figcaption></figure>
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/shot-koshiraku.png" alt="こしらく整体院のLPサンプル"><figcaption>こしらく整体院<span>整体院LP</span></figcaption></figure>
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/shot-nail.png" alt="ネイルサロン つめいろのLPサンプル"><figcaption>ネイルサロン つめいろ<span>美容サロンLP</span></figcaption></figure>
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/shot-yurari.png" alt="ほぐし整体 ゆらりのLPサンプル"><figcaption>ほぐし整体 ゆらり<span>女性向け整体LP</span></figcaption></figure>
+<figure><img src="https://mmat16890620-bit.github.io/bon-portfolio/shot-move.png" alt="ムーブ整体スタジオのLPサンプル"><figcaption>ムーブ整体スタジオ<span>スポーツ整体LP</span></figcaption></figure>
+</div>
+<p class="works-note">※上記は制作サンプルです（題材の店舗名はサンプル用のものです）。動画の制作実演は、下記の自社SNSで毎日公開しています。</p>
+<div class="sns-box">
+<div>
+<p class="t">自社SNSを毎日運用しています</p>
+<p class="d">Instagram（@t1689i）でリール動画を毎日制作・投稿中。日々の制作の様子はそのまま実演サンプルとしてご覧いただけます。</p>
+</div>
+<a class="btn btn-dark" href="https://mmat16890620-bit.github.io/bon-portfolio/" target="_blank" rel="noopener">ポートフォリオを見る</a>
+</div>
+</div>
+</section>
+
+<!-- ══════════ FLOW ══════════ -->
+<section class="sec" id="flow">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow"><span class="dot"></span>HOW TO ORDER</p>
+<h2>ご注文の<span class="acc">流れ</span></h2>
+<p class="lead">お取引はココナラ経由です。決済から納品まで、ココナラ上で完結します。</p>
+</div>
+<div class="steps">
+<div class="step"><div class="no">01</div><div><h3>ココナラでご注文・ご相談</h3><p>各サービスのページからそのままご注文いただけます。内容に迷う場合は、購入前にココナラのメッセージでご相談ください。</p></div></div>
+<div class="step"><div class="no">02</div><div><h3>ヒアリング</h3><p>商品・店舗の情報や、使いたい写真素材などをお預かりします。イメージのすり合わせをしてから制作に入ります。</p></div></div>
+<div class="step"><div class="no">03</div><div><h3>制作開始</h3><p>構成・編集・実装を進めます。納期の目安は動画5日〜、プラン・内容により前後します。</p></div></div>
+<div class="step"><div class="no">04</div><div><h3>納品・修正</h3><p>納品後、修正は1回まで無料で対応します（プランにより無料修正の回数が異なります）。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- ══════════ TRUST ══════════ -->
+<section class="sec alt" id="trust">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow"><span class="dot"></span>SAFE ORDER</p>
+<h2>安心して<span class="acc">ご注文</span>いただくために</h2>
+</div>
+<div class="trust">
+<div class="item"><h3>お取引はココナラ経由</h3><p>ご注文・お支払い・納品のやり取りはすべてココナラ上で行います。プラットフォームの仕組みの中でお取引いただけるので、初めての方も安心です。</p></div>
+<div class="item"><h3>修正対応</h3><p>納品後の修正は1回まで無料です（Premiumプランなど、プランにより回数が異なります）。文言の差し替えや軽微な調整はお気軽にご相談ください。</p></div>
+<div class="item"><h3>納期の目安</h3><p>動画制作は5日〜、LP制作は内容により2週間前後が目安です。正確な納期は各サービスページ（ココナラ）に記載しています。</p></div>
+</div>
+<p class="fineprint">※動画・LP・チャットボットの制作は集客活動を支援するものですが、売上や集客数の増加を保証するものではありません。あらかじめご了承ください。</p>
+<div class="cta-row" style="justify-content:center;margin-top:34px">
+<a class="cta-main" href="https://coconala.com/users/6372815" target="_blank" rel="noopener">ココナラで注文・相談する<small>BON｜店舗集客本舗 プロフィールへ</small></a>
+</div>
+</div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+<div class="wrap">
+<p class="mark">BON｜店舗集客本舗<small>BON STORE PROMOTION</small></p>
+<p>店舗・ECの集客を、動画とLPでまるごと。商品動画・店舗リール・LP制作・AIチャットボットのご注文・ご相談は、ココナラのプロフィールページから受け付けています。</p>
+<div class="f-links">
+<a class="btn btn-amber" href="https://coconala.com/users/6372815" target="_blank" rel="noopener">ココナラ プロフィール</a>
+<a class="btn btn-line" href="https://mmat16890620-bit.github.io/bon-portfolio/" target="_blank" rel="noopener" style="background:transparent;color:#F3F0E7;border-color:rgba(243,240,231,.4)">ポートフォリオ</a>
+</div>
+<p class="copy">© 2026 BON｜店舗集客本舗</p>
+</div>
+</footer>
+
+</body>
+</html>
