@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONOKA北浜｜北浜駅徒歩30秒・髪質改善とレイヤーカットの美容室</title>
+<meta name="description" content="大阪市中央区・北浜の美容室KONOKA。髪質改善・レイヤーカット・顔周りカットのスペシャリストが集まる、木の香りのカフェのようなサロン。北浜駅から徒歩30秒、営業時間10:00〜19:00。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:ital,wght@0,900;1,900&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+--paper:#FBF8F2; --ink:#2B211A; --muted:#7A6A5E; --line:rgba(43,33,26,.12);
+--bark:#4A3220; --bark-deep:#2E1D12; --brass:#C08A3E;
+--ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%}
+
+/* ===== NAV: floating pill ===== */
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:60;width:min(680px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:10px 10px 10px 20px;border-radius:999px;background:rgba(251,248,242,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(43,33,26,.1);box-shadow:0 8px 28px rgba(46,29,18,.1)}
+.nav .mark{font-weight:900;font-size:15px;letter-spacing:.02em}
+.nav .mark small{font-family:"Noto Sans Mono",monospace;font-weight:400;font-size:9px;letter-spacing:.2em;color:var(--muted);display:block;line-height:1.2}
+.nav .links{display:none;gap:22px;font-size:13px;font-weight:500}
+.nav .links a{color:var(--ink);text-decoration:none}
+.nav .book{background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:999px;text-decoration:none}
+@media(min-width:700px){.nav .links{display:flex}}
+
+/* ══════════ HERO CSS（ここから） ══════════ */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:#F1E9DC}
+.hero-art{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:center 62%;will-change:transform}
+.hero-gl{position:absolute;inset:-1% 0;width:100%;height:108%;display:block}
+.hero-grain{position:absolute;inset:0;opacity:.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+.hero-ghost{position:absolute;top:6%;right:-4%;font-family:"Noto Serif JP",serif;font-weight:900;font-size:52vw;line-height:1;color:var(--bark-deep);opacity:.07;pointer-events:none;will-change:transform}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(248,243,233,.93) 0%,rgba(248,243,233,.68) 36%,rgba(248,243,233,.4) 56%,rgba(248,243,233,0) 74%)}
+.hero-in{position:relative;z-index:3;padding:118px 22px 0;max-width:680px;margin:0 auto;width:100%}
+.hero-eyebrow{font-family:"Noto Sans Mono",monospace;font-size:11px;letter-spacing:.26em;color:var(--bark-deep);display:flex;align-items:center;gap:10px}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brass)}
+.hero h1{font-size:clamp(42px,11vw,76px);line-height:1.14;letter-spacing:-.02em;font-weight:900;margin:20px 0 18px}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .line-in{display:block}
+.js .hero h1 .line-in{transform:translateY(112%);filter:blur(6px);animation:lineRise 1s var(--ease) forwards;animation-delay:calc(.12s + var(--i)*.13s)}
+@keyframes lineRise{to{transform:none;filter:blur(0)}}
+.hero h1 .acc{font-family:"Noto Serif JP",serif;font-style:italic;color:var(--bark);font-size:.8em;letter-spacing:0}
+.hero .sub{font-size:15px;color:#43332A;max-width:28rem;font-weight:500;background:linear-gradient(180deg,rgba(248,243,233,.68),rgba(248,243,233,.5));backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);padding:12px 16px;border-radius:14px}
+.js .fade{opacity:0;transform:translateY(16px);filter:blur(5px);animation:blurRise.9s var(--ease) forwards;animation-delay:var(--fd,.5s)}
+@keyframes blurRise{to{opacity:1;transform:none;filter:blur(0)}}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.cta-main{background:var(--brass);color:#241503;font-weight:700;font-size:15.5px;padding:16px 30px;border-radius:999px;text-decoration:none;box-shadow:0 12px 26px rgba(192,138,62,.32)}
+.cta-main small{display:block;font-size:10.5px;font-weight:500;opacity:.75;letter-spacing:.06em}
+.cta-sub{border:1px solid rgba(43,33,26,.3);color:var(--ink);font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;text-decoration:none;background:rgba(251,248,242,.5);backdrop-filter:blur(6px)}
+.hero-meta{position:relative;z-index:3;margin-top:auto;background:rgba(248,243,233,.9);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.hero-meta ul{display:flex;max-width:680px;margin:0 auto;list-style:none}
+.hero-meta li{flex:1;text-align:center;padding:13px 2px;font-weight:700;font-size:12.5px;color:var(--bark-deep)}
+.hero-meta li+li{border-left:1px solid var(--line)}
+.hero-meta li span{display:block;font-family:"Noto Sans Mono",monospace;font-size:9.5px;letter-spacing:.18em;color:var(--muted);font-weight:400;margin-bottom:2px}
+/* ══════════ HERO CSS（ここまで） ══════════ */
+
+/* ===== BODY sections ===== */
+.sec{padding:84px 22px 8px;max-width:680px;margin:0 auto}
+.sec-tag{font-family:"Noto Sans Mono",monospace;font-size:10.5px;letter-spacing:.24em;color:var(--brass);margin-bottom:12px}
+.sec h2{font-size:clamp(26px,6.4vw,34px);font-weight:900;line-height:1.35;margin-bottom:14px}
+.sec h2 .acc{font-family:"Noto Serif JP",serif;font-style:italic;color:var(--bark)}
+.sec .lead{font-size:14.5px;line-height:1.95;color:#4A3B31}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.chips li{list-style:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--bark-deep)}
+.cards{display:grid;gap:14px;margin-top:26px}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px}
+.card .no{font-family:"Noto Sans Mono",monospace;font-size:11px;color:var(--brass);letter-spacing:.14em}
+.card h3{font-size:17px;font-weight:900;margin:8px 0 8px;line-height:1.5}
+.card p{font-size:13.5px;line-height:1.9;color:#4A3B31}
+.style-grid{display:grid;gap:12px;margin-top:26px}
+@media(min-width:640px){.style-grid{grid-template-columns:1fr 1fr 1fr}}
+.style-card{border-radius:18px;padding:20px 18px;background:linear-gradient(160deg,#F5ECDD,#EADCC4);border:1px solid var(--line)}
+.style-card .tag{font-family:"Noto Sans Mono",monospace;font-size:9.5px;letter-spacing:.18em;color:var(--bark);margin-bottom:8px}
+.style-card h3{font-size:15px;font-weight:900;line-height:1.55;margin-bottom:6px}
+.style-card p{font-size:12.5px;line-height:1.8;color:#4A3B31}
+.menu-list{margin-top:24px;border-top:1px solid var(--line)}
+.menu-item{display:flex;gap:16px;padding:20px 2px;border-bottom:1px solid var(--line)}
+.menu-item .ic{flex:none;width:46px;height:46px;border-radius:14px;background:#F1E9DC;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif JP",serif;font-weight:900;color:var(--bark);font-size:19px}
+.menu-item h3{font-size:16px;font-weight:900;margin-bottom:5px}
+.menu-item p{font-size:13.5px;line-height:1.85;color:#4A3B31}
+.price-note{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.8}
+.price-table{width:100%;border-collapse:collapse;margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.price-table th,.price-table td{padding:15px 16px;font-size:13.5px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.price-table tr:last-child th,.price-table tr:last-child td{border-bottom:none}
+.price-table th{font-weight:700;line-height:1.6;width:62%}
+.price-table th small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;margin-top:2px}
+.price-table td{font-weight:900;color:var(--bark-deep);white-space:nowrap;text-align:right}
+.price-table td s{display:block;font-weight:500;color:var(--muted);font-size:11.5px}
+.badge{display:inline-block;background:var(--brass);color:#241503;font-size:10.5px;font-weight:700;border-radius:999px;padding:3px 10px;margin-bottom:6px}
+.flow{margin-top:26px;display:grid;gap:0}
+.flow li{list-style:none;display:flex;gap:16px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.flow li:last-child{border-bottom:none}
+.flow .st{flex:none;width:38px;height:38px;border-radius:50%;background:var(--bark);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:15px}
+.flow h3{font-size:15.5px;font-weight:900;margin-bottom:4px}
+.flow p{font-size:13.5px;line-height:1.85;color:#4A3B31}
+.info-table{width:100%;border-collapse:collapse;margin-top:24px}
+.info-table th,.info-table td{padding:13px 4px;font-size:13.5px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.8}
+.info-table th{width:32%;color:var(--muted);font-weight:700}
+.faq{margin-top:22px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+.faq summary{font-weight:700;font-size:14.5px;cursor:pointer}
+.faq details p{font-size:13.5px;line-height:1.9;color:#4A3B31;margin-top:10px}
+.plan-table{width:100%;border-collapse:collapse;margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.plan-table th,.plan-table td{padding:15px 16px;font-size:13.5px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.7}
+.plan-table tr:last-child th,.plan-table tr:last-child td{border-bottom:none}
+.plan-table th{font-weight:900;width:40%}
+.plan-table th small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;margin-top:2px}
+.plan-table td{color:#4A3B31}
+.reserve{margin:84px 22px 0;background:var(--bark-deep);color:#F7F1E6;border-radius:26px;padding:38px 26px;text-align:center;max-width:636px}
+@media(min-width:724px){.reserve{margin-left:auto;margin-right:auto}}
+.reserve h2{font-size:24px;font-weight:900;margin-bottom:10px}
+.reserve p{font-size:13.5px;line-height:1.9;opacity:.85}
+.tel-btn{display:inline-block;margin-top:20px;background:var(--brass);color:#241503;font-weight:900;font-size:19px;padding:16px 34px;border-radius:999px;text-decoration:none;letter-spacing:.04em}
+.tel-btn small{display:block;font-size:11px;font-weight:500;opacity:.75}
+footer{padding:56px 22px 90px;text-align:center;max-width:680px;margin:0 auto}
+footer .fname{font-weight:900;font-size:16px;margin-bottom:8px}
+footer p{font-size:12px;color:var(--muted);line-height:1.9}
+footer .pvnote{margin-top:22px;font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<div class="mark">KONOKA 北浜<small>KONOKA KITAHAMA — HAIR SALON</small></div>
+<div class="links"><a href="#style">スタイル発信</a><a href="#menu">メニュー</a><a href="#price">料金</a><a href="#access">アクセス</a></div>
+<a class="book" href="tel:0662103787">電話予約</a>
+</nav>
+
+<!-- ══════════ HERO HTML（ここから） ══════════ -->
+<header class="hero">
+<img class="hero-art" id="heroArt" src="images/hero.jpg" alt="KONOKA北浜の施術イメージ">
+<canvas class="hero-gl" id="heroGL" data-img="images/hero.jpg" data-depth="images/hero-depth.png" aria-hidden="true"></canvas>
+<div class="hero-ghost" id="heroGhost">髪</div>
+<div class="hero-grain"></div>
+<div class="hero-shade"></div>
+<div class="hero-in">
+<p class="hero-eyebrow fade" style="--fd:.05s"><span class="dot"></span>HAIR SALON — 北浜駅から徒歩30秒</p>
+<h1>
+<span class="line"><span class="line-in" style="--i:0">広がる髪も、</span></span>
+<span class="line"><span class="line-in" style="--i:1">乾かすだけで、</span></span>
+<span class="line"><span class="line-in acc" style="--i:2">艶がまとまる。</span></span>
+</h1>
+<p class="sub fade" style="--fd:.55s">北浜駅から徒歩30秒。髪質改善とレイヤーカットのスペシャリストが集まる、木の香りのカフェのようなサロンです。丁寧なカウンセリングで髪の悩みをうかがい、あなたに合ったケアをご提案します。</p>
+<div class="cta-row fade" style="--fd:.7s">
+<a class="cta-main" href="#reserve">ご予約はこちら<small>カット＋髪質改善カラー＋内部補修TR 13,200円（新規）</small></a>
+<a class="cta-sub" href="#style">Instagramの発信を見る</a>
+</div>
+</div>
+<div class="hero-meta fade" style="--fd:.9s">
+<ul>
+<li><span>HOURS</span>10:00〜19:00</li>
+<li><span>ACCESS</span>北浜駅 徒歩30秒</li>
+<li><span>MENU</span>髪質改善 × レイヤー</li>
+<li><span>SPACE</span>カフェのような店内</li>
+</ul>
+</div>
+</header>
+<!-- ══════════ HERO HTML（ここまで） ══════════ -->
+
+<section class="sec rv" id="style">
+<p class="sec-tag">INSTAGRAM — スタイル発信が入口</p>
+<h2>見つけてもらう店は、<span class="acc">毎日の発信</span>から</h2>
+<p class="lead">KONOKAのスタイルは、Instagram（@konoka_kitahama）で発信しています。このページは、その投稿から来た方が「どんなメニューが自分に合うか」を確認して、そのまま予約できる受け皿として設計しました。気になるスタイルがあれば、投稿を保存してカウンセリングでお見せください。</p>
+<div class="style-grid">
+<div class="style-card"><p class="tag">STYLE 01</p><h3>カット＋髪質改善カラー＋内部補修トリートメント</h3><p>艶と色味を両立させたい方に。ダメージに配慮しながら、髪質改善カラーと内部補修ケアを組み合わせます。</p></div>
+<div class="style-card"><p class="tag">STYLE 02</p><h3>レイヤーカット＋顔周りカット</h3><p>計算されたレイヤーで動きを出し、顔周りで印象を整えるカット。「結んでも可愛い」仕上がりを目指します。</p></div>
+<div class="style-card"><p class="tag">STYLE 03</p><h3>髪質改善ストレート（酸性ストレート）</h3><p>うねり・広がりが気になる方に。ブリーチ毛への対応可否は、髪の状態を見てカウンセリングでご案内します。</p></div>
+</div>
+<p class="price-note">※ スタイルカードは発信テーマの例です。実際の投稿内容・頻度は運用プランで設計します（本セットのご提案はページ末尾「ご提案」セクションをご覧ください）。</p>
+</section>
+
+<section class="sec rv" id="trouble">
+<p class="sec-tag">TROUBLE — お悩み</p>
+<h2>こんな髪の悩み、<span class="acc">ありませんか</span></h2>
+<p class="lead">「広がる、パサつく」——KONOKAでは、丁寧なカウンセリングとオーダーメイドのケアで、髪の悩みに向き合います。髪に優しい薬剤を厳選し、芯から栄養を補給。形を整えるだけでなく、数年先まで続く健康な美しさを大切にしています。</p>
+<ul class="chips">
+<li>広がる・うねる</li><li>パサついてツヤがない</li><li>カラーやパーマのダメージ</li><li>白髪が気になり始めた</li><li>結んでも決まらない</li><li>朝のスタイリングに時間がかかる</li><li>縮毛矯正でペタンとなるのが嫌</li><li>年齢とともに髪が扱いにくくなった</li>
+</ul>
+</section>
+
+<section class="sec rv" id="feature">
+<p class="sec-tag">FEATURE — 選ばれる理由</p>
+<h2>初めての方でも、<span class="acc">安心して</span>通える理由</h2>
+<div class="cards">
+<div class="card"><p class="no">01</p><h3>丁寧なカウンセリングと、悩みに寄り添う提案</h3><p>初めての美容室は緊張するもの。KONOKAでは、髪の状態と悩みをしっかりうかがい、合うメニューを提案してから施術に入ります。「上手く伝えられるか不安」という方にも、仕上がりイメージを共有してからハサミを入れます。</p></div>
+<div class="card"><p class="no">02</p><h3>髪質改善メニューの艶と手触り</h3><p>髪内部のタンパク質に着目したトリートメントや髪質改善カラーで、ダメージが気になる髪もサラツヤへ。髪質改善カラーとの同時施術も可能です。</p></div>
+<div class="card"><p class="no">03</p><h3>翌日も扱いやすい、再現性の高いカット</h3><p>骨格や生え癖を計算したカットで、サロン帰りだけでなく翌日以降も自分でスタイリングしやすい仕上がりに。自宅での乾かし方など、ケア方法のレクチャーも行っています。</p></div>
+<div class="card"><p class="no">04</p><h3>カフェのような空間と、挽きたてコーヒー</h3><p>セット面の間隔を広く取ったパーソナルな空間で、その場で挽いたコーヒーを味わいながらゆったりと。お子様連れのご来店も歓迎しています。</p></div>
+</div>
+</section>
+
+<section class="sec rv" id="menu">
+<p class="sec-tag">MENU — メニュー</p>
+<h2>悩みに合わせた、<span class="acc">6つの柱</span></h2>
+<div class="menu-list">
+<div class="menu-item"><div class="ic">改</div><div><h3>髪質改善ストレート／酸性ストレート</h3><p>こだわりの髪質改善ストレートで、ダメージに配慮しながら自然なストレートへ。縮毛矯正後に「ペタンとならない」のも特徴です。人気の酸性ストレートもご用意しています。</p></div></div>
+<div class="menu-item"><div class="ic">色</div><div><h3>髪質改善カラー</h3><p>艶とオシャレを同時に叶える髪質改善カラー。30代からのエイジングケアや、白髪を「活かす」白髪ぼかしハイライトもご相談ください。</p></div></div>
+<div class="menu-item"><div class="ic">層</div><div><h3>レイヤーカット／顔周りカット</h3><p>骨格・生え癖を計算したカットで、あなたに合ったスタイルに。前髪カットや顔周りの似合わせで、印象を整えます。</p></div></div>
+<div class="menu-item"><div class="ic">潤</div><div><h3>ケラチントリートメント</h3><p>髪内部のタンパク質に着目したケラチントリートメント。カラーやパーマで傷んだ髪のケアに。</p></div></div>
+<div class="menu-item"><div class="ic">結</div><div><h3>ヘアセット</h3><p>結婚式・二次会・デート・イベントなど、大切な1日に。ショートからロングまで、崩れにくいセットをご提案します。</p></div></div>
+<div class="menu-item"><div class="ic">整</div><div><h3>前髪＋顔周りカット（メンテナンス）</h3><p>合間の時間に、印象が決まる前髪と顔周りだけを整えるメンテナンスメニュー（シャンプーなし）もご用意しています。</p></div></div>
+</div>
+<p class="price-note">メニューごとに特化したスペシャリストが在籍しています。どのメニューが合うか迷っている方には、カウンセリングで最適なメニューをご提案するクーポンもあります。</p>
+</section>
+
+<section class="sec rv" id="price">
+<p class="sec-tag">PRICE — 料金</p>
+<h2>まずは<span class="acc">新規クーポン</span>から</h2>
+<table class="price-table">
+<tr><th>前髪＋顔周りカット<small>シャンプーなし ／ 合間時間のメンテナンスに</small></th><td>¥3,850</td></tr>
+<tr><th><span class="badge">新規</span><br>似合わせカット＋内部補修トリートメント<small>「似合う」が見つかる入口メニュー</small></th><td><s>¥7,700</s>¥6,600</td></tr>
+<tr><th><span class="badge">新規</span><br>カット＋カラー</th><td><s>¥13,200</s>¥8,700</td></tr>
+<tr><th><span class="badge">新規</span><br>カット＋カラー＋内部補修トリートメント</th><td><s>¥15,400</s>¥9,900</td></tr>
+<tr><th><span class="badge">新規</span><br>カット＋髪質改善カラー＋内部補修トリートメント</th><td><s>¥18,700</s>¥13,200</td></tr>
+<tr><th><span class="badge">新規</span><br>カット＋髪質改善ストレート<small>ブリーチ毛への対応はカウンセリングで確認</small></th><td><s>¥29,500</s>¥22,000</td></tr>
+<tr><th>ケラチントリートメント<small>カットなしの単品ケア</small></th><td>¥19,800</td></tr>
+</table>
+<p class="price-note">※ 表示価格はホットペッパービューティー掲載クーポン（2026年11月確認）をもとにしています。クーポン価格は変更される場合がありますので、最新の料金はご予約時にご確認ください。カット単品は ¥5,500〜、ロング料金はかかりません。</p>
+</section>
+
+<section class="sec rv" id="flow">
+<p class="sec-tag">FLOW — 初めての方へ</p>
+<h2>ご来店の<span class="acc">流れ</span></h2>
+<ol class="flow">
+<li><div class="st">1</div><div><h3>ご予約</h3><p>ホットペッパービューティーのネット予約（即時予約OK）またはお電話（06-6210-3787）でご予約ください。</p></div></li>
+<li><div class="st">2</div><div><h3>カウンセリング</h3><p>髪の状態とお悩みをうかがい、仕上がりイメージを共有。合うメニューをご提案します。</p></div></li>
+<li><div class="st">3</div><div><h3>施術</h3><p>1人のスタイリストが仕上げまで担当します。フルフラットのシャンプー台で、リラックスしてお過ごしください。</p></div></li>
+<li><div class="st">4</div><div><h3>仕上げ・ホームケアのレクチャー</h3><p>仕上がりを確認し、自宅での乾かし方やケア方法をお伝えします。翌日からの再現しやすさが大切です。</p></div></li>
+</ol>
+</section>
+
+<section class="sec rv" id="access">
+<p class="sec-tag">ACCESS — アクセス・営業時間</p>
+<h2>北浜駅から、<span class="acc">徒歩30秒</span></h2>
+<table class="info-table">
+<tr><th>住所</th><td>〒541-0041 大阪府大阪市中央区北浜1-1-28 ビルマビル 8F（1Fのカフェ「Northshore」が目印です）</td></tr>
+<tr><th>アクセス</th><td>京阪 北浜駅 26番出口からすぐ／地下鉄堺筋線 北浜駅 1A出口からすぐ／淀屋橋駅から徒歩5分／なにわ橋駅から徒歩2分</td></tr>
+<tr><th>営業時間</th><td>10:00〜19:00（月曜日も営業しています）</td></tr>
+<tr><th>定休日</th><td>年末年始のみ</td></tr>
+<tr><th>電話</th><td>06-6210-3787</td></tr>
+<tr><th>設備・条件</th><td>セット面6席／スタイリスト5名／お子様同伴OK／禁煙／ドリンクサービスあり（挽きたてコーヒー）／専用駐車場はなく、近隣にコインパーキングがあります</td></tr>
+</table>
+</section>
+
+<section class="sec rv" id="faq">
+<p class="sec-tag">FAQ — よくある質問</p>
+<h2>ご来店前の<span class="acc">疑問</span>に答えます</h2>
+<div class="faq">
+<details><summary>予約は必要ですか？</summary><p>ネット予約は即時予約に対応しています。空きがあれば当日のご案内も可能な場合がありますので、お電話（06-6210-3787）でご確認ください。</p></details>
+<details><summary>ブリーチした髪でも髪質改善ストレートはできますか？</summary><p>髪の状態によって対応が変わります。カウンセリングで髪の状態を確認し、可能な施術をご提案します。まずはお気軽にご相談ください。</p></details>
+<details><summary>子どもと一緒に行けますか？</summary><p>はい、お子様連れのご来店も歓迎しています。キッズカットのご相談も可能です。</p></details>
+<details><summary>どのメニューを選べばいいか分かりません</summary><p>カウンセリングで髪の悩みと理想の仕上がりをうかがい、合うメニューをご提案します。「メニューに迷っている方へ」の相談クーポンもご用意しています。</p></details>
+<details><summary>支払い方法を教えてください</summary><p>現金のほか、クレジットカード（Visa／Mastercard／JCB／American Express／Diners Club）がご利用いただけます。電子マネー等の対応はご予約時にご確認ください。</p></details>
+</div>
+</section>
+
+<div class="reserve rv" id="reserve">
+<h2>ご予約・ご相談はこちら</h2>
+<p>営業時間 10:00〜19:00（月曜日も営業）／定休日 年末年始のみ<br>ネット予約はホットペッパービューティーから（即時予約OK）</p>
+<a class="tel-btn" href="tel:0662103787">06-6210-3787<small>タップで電話予約</small></a>
+</div>
+
+<section class="sec rv" id="proposal">
+<p class="sec-tag">PROPOSAL — このセットのご提案（KONOKA北浜 様へ）</p>
+<h2>まずは<span class="acc">投稿ストック／運用</span>から</h2>
+<p class="lead">このプレビューは、BON｜店舗集客本舗 からのご提案資料です。KONOKA様の技術と空間は、ホットペッパービューティーの口コミでも高く評価されている一方、Googleの口コミはまだ3件・写真9枚と、見つけてもらう窓口が育ちきっていません。そこで最初のご提案はLPではなく、毎月のスタイル発信を積み上げる「投稿ストック／SNS運用」から。発信が増えれば、このLPが予約の受け皿として働きます。</p>
+<table class="plan-table">
+<tr><th>投稿ストック（ライト）<small>まずは発信の量を確保</small></th><td>月額 ¥15,000 — 投稿文10本＋画像10点を毎月納品（投稿は貴店側）。アカウント情報はお預かりしません</td></tr>
+<tr><th>投稿ストック（スタンダード）<small>動画まで含める本命</small></th><td>月額 ¥29,800 — 投稿文10本＋ショート動画4本＋画像6点＋月次テーマ相談</td></tr>
+<tr><th>運用スタンダード<small>制作から投稿代行まで</small></th><td>月額 ¥60,000 — リール月8本＋Instagram／Threads／X投稿代行（事前承認制）＋月次レポート</td></tr>
+<tr><th>あわせて（任意）<small>受け皿と自動応答</small></th><td>このLPの正式制作 ¥15,000〜／AIチャットボット（FAQ自動応答）¥55,000〜＋保守。口コミ導線の整備（GBP）もご相談いただけます</td></tr>
+</table>
+<p class="price-note">※ 価格はBON｜店舗集客本舗の承認済み料金体系に基づきます。プランの詳細は各サービスページ（ココナラ）でご確認いただけます。</p>
+</section>
+
+<footer>
+<p class="fname">KONOKA 北浜（コノカ キタハマ）</p>
+<p>〒541-0041 大阪府大阪市中央区北浜1-1-28 ビルマビル 8F<br>北浜駅から徒歩30秒 ／ 淀屋橋駅から徒歩5分<br>TEL 06-6210-3787</p>
+<p class="pvnote">※ 本ページは BON｜店舗集客本舗 による制作プレビューです。ページ内の写真はイメージ（生成画像）です。正式に制作する際は、実店舗のお写真に差し替えます。掲載情報は公開情報をもとに作成しており、内容をご確認いただいたうえで正式公開します。</p>
+</footer>
+
+<script>
+(function(){
+if(!('IntersectionObserver' in window)){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('on')});return;}
+var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e);});
+setTimeout(function(){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('on')});},2500);
+})();
+</script>
+
+<!-- ══════════ HERO JS（ここから） ══════════ -->
+<script>
+(function(){
+var cv = document.getElementById('heroGL'); if(!cv) return;
+var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var gl = cv.getContext('webgl', {antialias:false, alpha:false, depth:false, stencil:false});
+if(!gl) return;
+var VS = 'attribute vec2 p; varying vec2 vUv; void main(){ vUv = p*0.5+0.5; gl_Position = vec4(p,0.0,1.0);}';
+var FS = ['precision highp float;','varying vec2 vUv;','uniform sampler2D uImg;','uniform sampler2D uDep;','uniform vec2 uMouse;','uniform vec4 uCover;','uniform float uZoom;','uniform float uStr;',
+'void main(){ vec2 uv = vUv*uCover.xy + uCover.zw; uv = (uv-0.5)*uZoom + 0.5; float d = texture2D(uDep, uv).r; vec2 off = uMouse*(d-0.32)*uStr; vec3 c = texture2D(uImg, uv+off).rgb; gl_FragColor = vec4(c,1.0);}'].join('\n');
+function sh(t, s){ var o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); return o;}
+var pr = gl.createProgram();
+gl.attachShader(pr, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FS));
+gl.linkProgram(pr); if(!gl.getProgramParameter(pr, gl.LINK_STATUS)) return;
+gl.useProgram(pr);
+var buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+var loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+var uImg = gl.getUniformLocation(pr,'uImg'), uDep = gl.getUniformLocation(pr,'uDep'),
+uMouse = gl.getUniformLocation(pr,'uMouse'), uCover = gl.getUniformLocation(pr,'uCover'),
+uZoom = gl.getUniformLocation(pr,'uZoom'), uStr = gl.getUniformLocation(pr,'uStr');
+function tex(img, unit){ var t = gl.createTexture(); gl.activeTexture(gl.TEXTURE0+unit); gl.bindTexture(gl.TEXTURE_2D, t);
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, img); return t;}
+var IA = 2/3;
+function resize(){ var dpr = Math.min(window.devicePixelRatio||1, 2);
+cv.width = Math.round(cv.clientWidth*dpr); cv.height = Math.round(cv.clientHeight*dpr); gl.viewport(0,0,cv.width,cv.height);
+var ba = cv.clientWidth/cv.clientHeight, sx, sy, ox, oy;
+if(ba > IA){ sx = 1; sy = IA/ba; ox = 0; oy = (1-sy)*0.30;} else { sx = ba/IA; sy = 1; ox = (1-sx)/2; oy = 0;}
+gl.uniform4f(uCover, sx, sy, ox, oy);}
+var tx=0, ty=0, mx=0, my=0, ready=false, visible=true, started=false;
+function frame(t){
+var sway = reduced? 0: 1;
+var sx = Math.sin(t*0.00042)*0.42*sway, sy = Math.cos(t*0.00031)*0.30*sway;
+mx += ((tx+sx) - mx)*0.045; my += ((ty+sy) - my)*0.045;
+gl.uniform2f(uMouse, mx, my);
+gl.activeTexture(gl.TEXTURE0); gl.uniform1i(uImg, 0);
+gl.activeTexture(gl.TEXTURE1); gl.uniform1i(uDep, 1);
+gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+if(!reduced && visible) requestAnimationFrame(frame);
+}
+function start(){ if(started) return; started = true; IA = im1.naturalWidth/im1.naturalHeight; resize(); gl.uniform1f(uZoom, 1.08); gl.uniform1f(uStr, 0.034);
+var art = document.getElementById('heroArt'); if(art) art.style.visibility = 'hidden';
+requestAnimationFrame(frame);}
+var loaded = 0, im1 = new Image(), im2 = new Image();
+function onload(){ if(++loaded === 2){ tex(im1, 0); tex(im2, 1); ready = true; start();}}
+im1.onload = onload; im2.onload = onload;
+im1.src = cv.dataset.img; im2.src = cv.dataset.depth;
+window.addEventListener('resize', function(){ if(ready) resize();});
+var hero = document.querySelector('.hero');
+hero.addEventListener('pointermove', function(e){ tx = (e.clientX/window.innerWidth -.5)*1.6; ty = -(e.clientY/window.innerHeight -.5)*1.6;});
+new IntersectionObserver(function(es){ es.forEach(function(e){ var was = visible; visible = e.isIntersecting;
+if(visible &&!was && ready &&!reduced) requestAnimationFrame(frame);});}).observe(hero);
+})();
+</script>
+<!-- ══════════ HERO JS（ここまで） ══════════ -->
+</body>
+</html>
