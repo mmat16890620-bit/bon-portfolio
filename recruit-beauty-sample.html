@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美容クリニック採用LP（サンプル）｜スタッフ募集</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:ital,wght@0,900;1,900&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+--paper:#FBFAF5; --ink:#1D2A23; --muted:#68766C; --line:rgba(29,42,35,.12);
+--green:#17573F; --green-deep:#0C3524; --amber:#D97706; --amber-soft:#FDF3E3;
+--ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+a{color:var(--green)}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+.samplebar{background:var(--green-deep);color:#F3F0E7;text-align:center;font-size:12px;font-weight:700;letter-spacing:.08em;padding:9px 14px}
+.samplebar span{color:#FFD98A}
+.nav{position:sticky;top:14px;z-index:60;width:min(680px,calc(100% - 28px));margin:14px auto 0;display:flex;align-items:center;justify-content:space-between;padding:10px 10px 10px 20px;border-radius:999px;background:rgba(251,250,245,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(29,42,35,.1);box-shadow:0 8px 28px rgba(12,53,36,.1)}
+.nav .mark{font-weight:900;font-size:15px;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.nav .mark small{font-family:"Noto Sans Mono",monospace;font-weight:400;font-size:9px;letter-spacing:.2em;color:var(--muted);display:block;line-height:1.2}
+.nav .book{background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .3s var(--ease)}
+.nav .book:hover{transform:translateY(-1px)}
+.hero{position:relative;padding:64px 0 0;background:linear-gradient(180deg,#F3F0E7 0%,var(--paper) 80%);overflow:hidden}
+.hero-ghost{position:absolute;top:0;right:-8%;font-family:"Noto Serif JP",serif;font-weight:900;font-size:62vw;line-height:1;color:var(--green-deep);opacity:.05;pointer-events:none}
+.hero-in{position:relative;z-index:2;animation:rise .9s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.eyebrow{font-family:"Noto Sans Mono",monospace;font-size:11px;letter-spacing:.26em;color:var(--green-deep);display:flex;align-items:center;gap:10px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none}
+.hero h1{font-size:clamp(36px,10vw,58px);line-height:1.2;letter-spacing:-.02em;font-weight:900;margin:20px 0 16px}
+.hero h1 .acc{font-family:"Noto Serif JP",serif;font-style:italic;color:var(--green);font-size:.86em;letter-spacing:0}
+.hero .sub{font-size:15px;color:#33463C;font-weight:500;max-width:32rem;line-height:1.9}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{border:1px solid rgba(29,42,35,.22);border-radius:999px;padding:7px 15px;font-size:13px;font-weight:700;background:rgba(255,255,255,.6)}
+.chip.hot{border-color:rgba(217,119,6,.55);background:var(--amber-soft)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;align-items:center}
+.cta-main{background:var(--amber);color:#221503;font-weight:700;font-size:15.5px;padding:16px 30px;border-radius:999px;text-decoration:none;box-shadow:0 12px 26px rgba(217,119,6,.32);transition:transform .3s var(--ease)}
+.cta-main:hover{transform:translateY(-2px)}
+.cta-main small{display:block;font-size:10.5px;font-weight:500;opacity:.75;letter-spacing:.06em}
+.cta-sub{border:1px solid rgba(29,42,35,.3);color:var(--ink);font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;text-decoration:none;background:rgba(251,250,245,.5);transition:transform .3s var(--ease)}
+.cta-sub:hover{transform:translateY(-2px)}
+.hero-meta{margin-top:44px;background:rgba(243,240,231,.92);border-top:1px solid var(--line)}
+.hero-meta ul{display:flex;max-width:720px;margin:0 auto;list-style:none;flex-wrap:wrap}
+.hero-meta li{flex:1 1 50%;text-align:center;padding:13px 2px;font-weight:700;font-size:12.5px;color:var(--green-deep)}
+.hero-meta li span{display:block;font-family:"Noto Sans Mono",monospace;font-size:9.5px;letter-spacing:.18em;color:var(--muted);font-weight:400;margin-bottom:2px}
+@media(min-width:700px){.hero-meta li{flex:1}}
+.sample-note{padding:26px 0 40px}
+.sample-note p{font-size:12px;color:var(--muted);line-height:1.9;border:1px dashed rgba(29,42,35,.25);border-radius:12px;padding:14px 16px;background:rgba(255,255,255,.5)}
+@media (prefers-reduced-motion: reduce){.hero-in{animation:none}.nav .book,.cta-main,.cta-sub{transition:none}}
+
+</style>
+</head>
+<body>
+<div class="samplebar">制作サンプル <span>— 美容クリニック採用LP（ファーストビュー案）</span></div>
+<header class="nav">
+  <a class="mark" href="#">BEAUTY CLINIC<small>RECRUIT — STAFF WANTED</small></a>
+  <a class="book" href="#apply">応募・相談する</a>
+</header>
+<section class="hero">
+  <div class="hero-ghost">美</div>
+  <div class="wrap hero-in">
+    <p class="eyebrow"><span class="dot"></span>BEAUTY CLINIC — RECRUIT</p>
+    <h1>“美”の現場で、<br><span class="acc">自分らしく</span>働く。</h1>
+    <p class="sub">美容クリニックのスタッフ採用ページです。患者さまの「なりたい」に寄り添う仕事を、美容医療の知識が身につく環境で。あなたの「好き」を、確かなスキルに変えていきませんか。</p>
+    <div class="chips">
+          <span class="chip hot">看護師</span>
+          <span class="chip">受付・カウンセラー</span>
+          <span class="chip">未経験・ブランク相談可</span>
+          <span class="chip">美容医療の知識が身につく</span>
+    </div>
+    <div class="cta-row" id="apply">
+      <a class="cta-main" href="#apply">まずは相談・応募する<small>LINE・応募フォームから（まずは気軽に相談できます）</small></a>
+      <a class="cta-sub" href="#apply">働き方について聞く</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <ul>
+        <li><span>POSITIONS</span>看護師・受付カウンセラー</li>
+        <li><span>STYLE</span>正社員・パート</li>
+        <li><span>AREA</span>関西エリア</li>
+        <li><span>POINT</span>未経験相談可</li>
+    </ul>
+  </div>
+</section>
+<div class="wrap sample-note">
+  <p>※このページは BON（店舗集客本舗）の制作サンプルです。店舗名・募集条件などの実情報は含まれていません。実案件では、お店の実際の募集内容・写真に差し替えて制作します。ファーストビュー（1画面目）のみの案です。</p>
+</div>
+</body>
+</html>
