@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生まれた時間で分かる、あなたの隠れた才能｜紫微斗数ミニ鑑定（エンタメ占い）</title>
+<meta name="description" content="生年月日と生まれた時間から命盤を作る、無料の紫微斗数ミニ鑑定。性格と隠れた才能を短いレポートでお届けします。計算はブラウザ内で完結し、出生情報は送信・保存されません。">
+<style>
+  :root{
+    --purple-900:#241640; --purple-800:#2f1d55; --purple-700:#3d2769;
+    --gold:#c9a227; --gold-light:#e7cd7a; --paper:#faf7ef; --ink:#2b2438;
+    --muted:#6f6584; --line:#e3dcc8;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+    background:var(--purple-900); color:var(--ink); line-height:1.75;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:560px; margin:0 auto; padding:20px 14px 40px;}
+  header.hero{
+    text-align:center; padding:34px 18px 26px; color:#f4ecd8;
+    background:linear-gradient(160deg,var(--purple-800),var(--purple-900));
+    border:1px solid rgba(201,162,39,.45); border-radius:14px;
+  }
+  .hero .mark{
+    width:64px; height:64px; margin:0 auto 12px; border:1.5px solid var(--gold);
+    border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    font-size:26px; color:var(--gold-light);
+  }
+  h1{
+    font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    font-size:24px; font-weight:600; letter-spacing:.04em; line-height:1.5;
+  }
+  .hero p.sub{margin-top:10px; font-size:13.5px; color:#d9cfe9;}
+  .entame{
+    display:inline-block; margin-top:14px; padding:3px 12px; font-size:12px;
+    border:1px solid var(--gold); border-radius:999px; color:var(--gold-light); letter-spacing:.12em;
+  }
+  section.card{
+    background:var(--paper); border-radius:14px; padding:22px 18px; margin-top:16px;
+    box-shadow:0 4px 18px rgba(0,0,0,.25);
+  }
+  h2{
+    font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    font-size:18px; color:var(--purple-800); border-bottom:2px solid var(--gold);
+    padding-bottom:6px; margin-bottom:14px; letter-spacing:.05em;
+  }
+  label.flabel{display:block; font-size:13px; font-weight:700; color:var(--purple-800); margin:14px 0 6px;}
+  label.flabel:first-of-type{margin-top:0;}
+  input[type="date"], select{
+    width:100%; padding:11px 10px; font-size:16px; border:1px solid #c9c0ab;
+    border-radius:8px; background:#fff; color:var(--ink);
+  }
+  .gender-row{display:flex; gap:10px;}
+  .gender-row label{
+    flex:1; text-align:center; padding:10px 0; border:1px solid #c9c0ab; border-radius:8px;
+    background:#fff; font-size:15px; cursor:pointer;
+  }
+  .gender-row input{margin-right:6px;}
+  .note{font-size:12px; color:var(--muted); margin-top:6px;}
+  button.submit{
+    width:100%; margin-top:20px; padding:14px 0; font-size:17px; font-weight:700;
+    color:#241640; background:linear-gradient(180deg,var(--gold-light),var(--gold));
+    border:none; border-radius:10px; cursor:pointer; letter-spacing:.08em;
+  }
+  button.submit:active{transform:translateY(1px);}
+  #form-error{display:none; margin-top:12px; padding:10px 12px; background:#fdeeee; color:#a33; border-radius:8px; font-size:13.5px;}
+  .privacy{margin-top:14px; font-size:12px; color:var(--muted); text-align:center;}
+  /* レポート */
+  #report{display:none;}
+  .type-block{text-align:center; padding:6px 0 2px;}
+  .type-label{font-size:12.5px; color:var(--muted); letter-spacing:.15em;}
+  .type-name{
+    font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    font-size:27px; color:var(--purple-800); margin:4px 0 2px; line-height:1.4;
+  }
+  .type-epithet{font-size:14px; color:var(--gold); font-weight:700; letter-spacing:.06em;}
+  .sec{margin-top:18px;}
+  .sec h3{
+    font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    font-size:16.5px; color:var(--purple-800); margin-bottom:6px;
+  }
+  .sec h3::before{content:"◆ "; color:var(--gold); font-size:12px; vertical-align:2px;}
+  .sec p{font-size:15px;}
+  .kw-word{
+    display:inline-block; font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    font-size:22px; color:var(--purple-800); border:1.5px solid var(--gold); border-radius:8px;
+    padding:2px 16px; margin:2px 0 8px; background:#fff;
+  }
+  #r-second{font-size:13.5px; color:var(--muted); margin-top:12px;}
+  #r-simple-note{display:none; margin-top:12px; padding:8px 12px; background:#fff7dd; border-radius:8px; font-size:12.5px; color:#7a6414;}
+  dl.summary{display:grid; grid-template-columns:auto 1fr; gap:6px 14px; font-size:14px;}
+  dl.summary dt{font-weight:700; color:var(--purple-800); white-space:nowrap;}
+  .palaces{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .palace{background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px 10px;}
+  .palace-soul{border-color:var(--gold); background:#fffaf0;}
+  .palace-name{display:block; font-size:12px; font-weight:700; color:var(--purple-800);}
+  .palace-stars{display:block; font-size:13.5px; margin-top:2px;}
+  .closing{
+    margin-top:20px; text-align:center; font-size:14px; color:var(--purple-800);
+    border-top:1px dashed var(--gold); padding-top:14px;
+  }
+  footer{margin-top:22px; padding:0 6px; color:#bdb1d6; font-size:11.5px; line-height:1.8;}
+  footer a{color:var(--gold-light);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="mark">紫</div>
+    <h1>生まれた時間で分かる、<br>あなたの隠れた才能</h1>
+    <p class="sub">中国の皇帝だけが使えたとされる占い「紫微斗数」の命盤から、<br>あなたの性格と隠れた才能を読み解く無料ミニ鑑定です。</p>
+    <span class="entame">エンタメ占い</span>
+  </header>
+
+  <section class="card">
+    <h2>ミニ鑑定をはじめる</h2>
+    <form id="form" novalidate>
+      <label class="flabel" for="birthdate">生年月日</label>
+      <input type="date" id="birthdate" min="1920-01-01" max="2030-12-31" required>
+      <label class="flabel" for="birthhour">生まれた時間</label>
+      <select id="birthhour"></select>
+      <p class="note">出生時刻が分からない場合は「わからない」を選んでください（簡易表示になります）。</p>
+      <label class="flabel">性別</label>
+      <div class="gender-row">
+        <label><input type="radio" name="gender" value="female">女性</label>
+        <label><input type="radio" name="gender" value="male">男性</label>
+      </div>
+      <button type="submit" class="submit">無料で鑑定する</button>
+      <p id="form-error"></p>
+      <p class="privacy">入力した出生情報は、このページの中だけで計算されます。<br>サーバーへの送信・保存は一切されません。</p>
+    </form>
+  </section>
+
+  <section class="card" id="report">
+    <h2>あなたのミニ鑑定レポート</h2>
+    <div class="type-block">
+      <div class="type-label">あなたの命盤タイプは</div>
+      <div class="type-name" id="r-type"></div>
+      <div class="type-epithet" id="r-epithet"></div>
+    </div>
+
+    <div class="sec">
+      <h3>あなたの性格</h3>
+      <p id="r-personality"></p>
+    </div>
+    <div class="sec">
+      <h3>あなたの隠れた才能</h3>
+      <p id="r-talent"></p>
+    </div>
+    <div class="sec">
+      <h3>2027年のキーワード</h3>
+      <div><span class="kw-word" id="r-kw-word"></span></div>
+      <p id="r-kw-text"></p>
+    </div>
+    <p id="r-second"></p>
+    <p id="r-simple-note">※出生時刻が不明のため、昼の時間帯で計算した簡易表示です。時刻が分かると結果が変わる場合があります。</p>
+
+    <div class="sec">
+      <h3>命盤サマリ</h3>
+      <dl class="summary">
+        <dt>命宮の主星</dt><dd id="r-soul-stars"></dd>
+        <dt>五行局</dt><dd id="r-five"></dd>
+        <dt>命主</dt><dd id="r-soul"></dd>
+        <dt>身主</dt><dd id="r-body"></dd>
+        <dt>旧暦の生年月日</dt><dd id="r-lunar"></dd>
+      </dl>
+    </div>
+
+    <div class="sec">
+      <h3>あなたの命盤（十二宮）</h3>
+      <div class="palaces" id="r-palaces"></div>
+    </div>
+
+    <p class="closing">もっと詳しく知りたい方へ——完全版レポートは準備中です。お楽しみに。</p>
+  </section>
+
+  <footer>
+    <p>※本ツールはエンタメ占いです。結果は伝統的な解釈に基づく傾向を表すもので、将来を断定するものではありません。</p>
+    <p>解釈の参考：紫微斗数オープン解釈データセット v4.0（出典：<a href="https://github.com/Renhuai123/ziwei-doushu" rel="noopener">Renhuai123/ziwei-doushu</a>、作者：王多鱼AI、CC BY 4.0）／排盤方式：同プロジェクト（コード：MITライセンス）の検証済み口径を採用／排盤エンジン：iztro（MITライセンス）</p>
+    <p>入力した出生情報はブラウザ内で計算されるだけで、送信・保存されません。</p>
+  </footer>
+
+</div>
+<script src="./bundle.js"></script>
+</body>
+</html>
